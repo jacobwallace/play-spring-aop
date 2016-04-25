@@ -1,0 +1,3 @@
+GET        /mailboxes/:mailboxId                                               @io.github.jacobwallace.play_spring_aop.mailbox.MailboxController.getMailbox(mailboxId: Long)
+GET        /mailboxes/:mailboxId/conversations/:conversationId                 @io.github.jacobwallace.play_spring_aop.mailbox.conversation.ConversationController.getConversation(mailboxId: Long, conversationId: Long)
+GET        /mailboxes/:mailboxId/conversations/:conversationId/reversed        @io.github.jacobwallace.play_spring_aop.mailbox.conversation.ConversationController.getConversationWithReversedArgs(conversationId: Long, mailboxId: Long)
