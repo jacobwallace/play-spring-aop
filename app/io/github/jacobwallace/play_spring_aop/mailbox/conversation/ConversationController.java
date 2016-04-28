@@ -1,5 +1,6 @@
 package io.github.jacobwallace.play_spring_aop.mailbox.conversation;
 
+import io.github.jacobwallace.play_spring_aop.authorization.mailbox.conversation.RequiresLightweightConversation;
 import lombok.val;
 import org.springframework.stereotype.Component;
 import play.libs.F.Promise;
@@ -21,10 +22,13 @@ public class ConversationController extends Controller {
     }
 
     private Promise<Result> getConversationImpl(Long mailboxId, Long conversationId) {
-        val conversation = new Conversation();
-        conversation.setId(conversationId);
-        conversation.setText(String.format("This is a sample conversation in mailbox %d.", mailboxId));
+        val conversation = (Conversation) ctx().args.get("conversation");
+        return pure(ok(toJson(conversation)));
+    }
 
+    @RequiresLightweightConversation
+    public Promise<Result> getLightweightConversation(Long mailboxId, Long conversationId) {
+        val conversation = (Conversation) ctx().args.get("conversation");
         return pure(ok(toJson(conversation)));
     }
 }

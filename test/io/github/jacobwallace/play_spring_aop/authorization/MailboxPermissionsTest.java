@@ -1,4 +1,4 @@
-package io.github.jacobwallace.play_spring_aop;
+package io.github.jacobwallace.play_spring_aop.authorization;
 
 import org.junit.Test;
 import play.libs.ws.WS;
@@ -13,11 +13,11 @@ import static play.mvc.Http.Status.OK;
  */
 public class MailboxPermissionsTest extends WithServer {
 
-    private final int port = 9090;
+    private final int PORT = 9090;
 
     @Override
     protected int providePort() {
-        return port;
+        return PORT;
     }
 
     @Test
@@ -40,6 +40,6 @@ public class MailboxPermissionsTest extends WithServer {
 
     private int getting(String endpoint) {
         long timeout = 1000;
-        return WS.url(String.format("http://localhost:%d/%s", port, endpoint)).get().get(timeout).getStatus();
+        return WS.url(String.format("http://localhost:%d/%s", PORT, endpoint)).get().get(timeout).getStatus();
     }
 }
