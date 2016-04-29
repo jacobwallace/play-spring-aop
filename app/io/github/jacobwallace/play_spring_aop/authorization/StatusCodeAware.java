@@ -1,4 +1,4 @@
-package io.github.jacobwallace.play_spring_aop.common.authorization;
+package io.github.jacobwallace.play_spring_aop.authorization;
 
 public interface StatusCodeAware {
 

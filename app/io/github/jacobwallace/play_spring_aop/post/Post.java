@@ -1,14 +1,14 @@
-package io.github.jacobwallace.play_spring_aop.mailbox;
+package io.github.jacobwallace.play_spring_aop.post;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 @Data
-public class Mailbox {
+public class Post {
 
     private Long id;
 
-    private String name;
+    private String text;
 
     @JsonIgnore
     private boolean deleted;

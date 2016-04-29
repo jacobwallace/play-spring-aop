@@ -1,4 +1,4 @@
-GET        /mailboxes/:mailboxId                                               @io.github.jacobwallace.play_spring_aop.mailbox.MailboxController.getMailbox(mailboxId: Long)
-GET        /mailboxes/:mailboxId/conversations/:conversationId                 @io.github.jacobwallace.play_spring_aop.mailbox.conversation.ConversationController.getConversation(mailboxId: Long, conversationId: Long)
-GET        /mailboxes/:mailboxId/conversations/:conversationId/reversed        @io.github.jacobwallace.play_spring_aop.mailbox.conversation.ConversationController.getConversationWithReversedArgs(conversationId: Long, mailboxId: Long)
-GET        /mailboxes/:mailboxId/conversations/:conversationId/lightweight     @io.github.jacobwallace.play_spring_aop.mailbox.conversation.ConversationController.getLightweightConversation(mailboxId: Long, conversationId: Long)
+GET   /posts/:postId                                   @io.github.jacobwallace.play_spring_aop.post.PostController.getPost(postId: Long)
+GET   /posts/:postId/comments/:commentId               @io.github.jacobwallace.play_spring_aop.post.comment.CommentController.getComment(postId: Long, commentId: Long)
+GET   /posts/:postId/comments/:commentId/reversed      @io.github.jacobwallace.play_spring_aop.post.comment.CommentController.getCommentWithReversedArgs(commentId: Long, postId: Long)
+GET   /posts/:postId/comments/:commentId/lightweight   @io.github.jacobwallace.play_spring_aop.post.comment.CommentController.getLightweightComment(postId: Long, commentId: Long)

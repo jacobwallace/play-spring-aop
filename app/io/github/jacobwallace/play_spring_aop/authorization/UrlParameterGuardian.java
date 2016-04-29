@@ -1,4 +1,4 @@
-package io.github.jacobwallace.play_spring_aop.common.authorization;
+package io.github.jacobwallace.play_spring_aop.authorization;
 
 import lombok.SneakyThrows;
 import lombok.val;
@@ -22,7 +22,7 @@ import static play.mvc.Controller.ctx;
 public abstract class UrlParameterGuardian<T> {
 
     @Before("execution(public * play.mvc.Controller+.*(..))")
-    public void checkMailboxAccessIfMethodContainsMailboxId(JoinPoint joinPoint) {
+    public void checkAccess(JoinPoint joinPoint) {
         val parameters = parameters(joinPoint);
         val annotations = methodAnnotations(joinPoint);
 

@@ -1,5 +1,5 @@
-import io.github.jacobwallace.play_spring_aop.common.authorization.AopPreconditionsConfig;
-import io.github.jacobwallace.play_spring_aop.common.authorization.StatusCodeAware;
+import io.github.jacobwallace.play_spring_aop.authorization.AopPreconditionsConfig;
+import io.github.jacobwallace.play_spring_aop.authorization.StatusCodeAware;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import play.Application;
 import play.GlobalSettings;
